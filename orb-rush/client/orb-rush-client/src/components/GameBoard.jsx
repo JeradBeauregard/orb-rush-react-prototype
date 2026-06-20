@@ -1,19 +1,21 @@
 import './GameBoard.css';
 
 let gameBoard = [
-    [[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12]], 
-    [[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12]], 
-    [[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12]], 
-    [[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12]], 
-    [[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12]], 
-    [[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12]], 
-    [[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12]], 
-    [[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12]], 
-    [[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12]], 
-    [[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12]], 
-    [[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12]], 
-    [[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12]] 
+    [null, null, null, null, null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null, null, null, null, null], 
+   
 ];
+
+function handleSelectSquare(rowIndex, tileIndex){
+
+}
 
 export default function GameBoard() {
   return (
@@ -22,9 +24,11 @@ export default function GameBoard() {
         <div className="orb-row" key={rowIndex}>
           {row.map((tile, tileIndex) => (
             <div
-              className="boardPiece"
+              
               key={`${rowIndex}-${tileIndex}`}
-            />
+            >
+              <button className="boardPiece" onClick={()=>handleSelectSquare(rowIndex,tileIndex)}></button>
+            </div>
           ))}
         </div>
       ))}

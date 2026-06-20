@@ -1,0 +1,18 @@
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#game-container{
+    height: 874px;
+    width: 402px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(80, 80, 80);
+    border-radius: 15px;
+}
